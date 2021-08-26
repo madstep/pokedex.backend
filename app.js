@@ -11,6 +11,9 @@ var pokemon_routes = require('./routes/pokemon')
 app.use(bodyParse.urlencoded({extended:true}));
 app.use(bodyParse.json());
 
+app.get("/",(req,res)=>{
+    res.send("Pokedex");
+});
 app.use('/api/user', user_routes)
 app.use('/api/pokedex', pokemon_routes)
 module.exports = app;
