@@ -2,7 +2,7 @@
 require('dotenv').config()
 var mongoose = require('mongoose');
 var app = require('./app');
-var port = process.env.PORT;
+var port = process.env.PORT || 3000;
 
 var srv = process.env.DB_CONNECTION+'://'+process.env.DB_USERNAME+':'+process.env.DB_PASSWORD+process.env.DB_HOST+'/'+process.env.DB_DATABASE;
 console.log(srv);
